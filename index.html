@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>Test Page</title>
+</head>
+<body>
+<button 
+	id="blue-button"
+	data-ct-checkout="wyman.foobar--4"
+	data-ct-attributes="color=blue"
+	>
+	Order Blue
+</button>
+
+<button
+	id="green-button"
+	data-ct-checkout="wyman.foobar--4"
+	data-ct-attributes="color=kelly green"
+	style="display:none;"
+	>
+	Order Green
+</button>
+
+<button id="change-button" onclick="pickBlue();">
+	Pick Blue
+</button>
+
+<button id="change-button" onclick="pickGreen();">
+	Pick Kelly Green
+</button>
+
+<script type="text/javascript" src="./checkout.js"></script>
+<script type="text/javascript">
+	function pickBlue() {
+		var blue = document.getElementById('blue-button');
+		var green = document.getElementById('green-button');
+		blue.style.display = 'initial';
+		green.style.display = 'none';
+	}
+	function pickGreen() {
+		var blue = document.getElementById('blue-button');
+		var green = document.getElementById('green-button');
+		green.style.display = 'initial';
+		blue.style.display = 'none';
+	}
+</script>
+</body>
+</html>
